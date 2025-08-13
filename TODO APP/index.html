@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notique</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="stats-container">
+      <div class="details">
+        <h1>Welcome to <span>Notique</span></h1>
+        <p>Your one-stop solution for elegant note-taking.</p>
+      </div>
+      <div class="progress-wrapper">
+        <svg class="progress-ring" width="80" height="80">
+          <circle class="background-ring" cx="40" cy="40" r="30" />
+          <circle class="progress-ring-circle" cx="40" cy="40" r="30" />
+        </svg>
+        <div class="progress-label" id="progress-label">0 / 0</div>
+      </div>
+    </div>
+
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="Write your note here..." required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <button id="delete-all-btn" class="delete-btn" style="align-self: flex-end; margin-bottom: 10px;">
+      Delete All Tasks
+    </button>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
