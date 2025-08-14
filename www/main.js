@@ -37,6 +37,16 @@ $(document).ready(function () {
             effect: "fadeOutUp",
             sync: true
         },
-    })
+    });
 
-});
+    // Mic button click event
+    $('#MicBtn').on('click', function () {
+        // Start listening for voice input
+    });$("#MicBtn").click(function () {
+        eel.playAssistantSound();
+        $("#Oval").attr("hidden", true);
+        $("#SiriWave").attr("hidden", false);
+        
+    });
+
+}); 
